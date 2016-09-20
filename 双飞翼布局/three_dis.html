@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        *{
+            margin: 0 0;
+            padding: 0 0;
+        }
+        .content{
+            padding: 0 200px 0 200px;
+        }
+        .right,#main,.left{
+            float: left;
+        }
+        .left{
+            width: 200px;
+            height: 500px;
+            background-color: yellow;
+            margin-left: -100%;
+            position: relative;
+            left: -200px;
+        }
+        #main{
+            width: 100%;
+            height: 600px;
+            background: url("bg_1024*768.jpg");
+        }
+        .right{
+            width: 200px;
+            height: 400px;
+            background-color: aqua;
+            margin-left: -200px;
+            position: relative;
+            right: -200px;
+        }
+        #ds-thread {
+            background-color: rgba(0,0,0,0.2);
+            border-radius: 10px;
+        }
+        #ds-thread #ds-reset .ds-rounded-top{
+            background: rgba(0,0,0,0.2);
+        }
+
+
+        #ds-thread #ds-reset .ds-highlight{
+            color: #ffcc00 !important;
+        }
+        #ds-thread #ds-reset .ds-comment-body p {
+            color: #ffffff;
+        }
+    </style>
+    <title>Title</title>
+</head>
+<body>
+<div class="content">
+    <div id="main">
+        main
+        <!-- 多说评论框 start -->
+        <div class="ds-thread" data-thread-key="" data-title="请替换成文章的标题" data-url="请替换成文章的网址"></div>
+        <!-- 多说评论框 end -->
+        <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+        <script type="text/javascript">
+            var duoshuoQuery = {short_name:"fanyank"};
+            (function() {
+                var ds = document.createElement('script');
+                ds.type = 'text/javascript';ds.async = true;
+                ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+                ds.charset = 'UTF-8';
+                (document.getElementsByTagName('head')[0]
+                || document.getElementsByTagName('body')[0]).appendChild(ds);
+            })();
+        </script>
+        <!-- 多说公共JS代码 end -->
+
+    </div>
+    <div class="left">
+        left
+    </div>
+    <div class="right">
+        right
+    </div>
+</div>
+</body>
+</html>

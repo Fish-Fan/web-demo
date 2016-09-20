@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .wrap{
+            width: 200px;
+            margin: 100px auto;
+        }
+        ul{
+            list-style: none;
+
+        }
+        ul li{
+            display: block;
+            padding: 3px 5px;
+            border: 1px solid #999;
+            border-top: none;
+        }
+        ul li a{
+            text-decoration: none;
+            color: black;
+        }
+        #first-li{
+            border-top: 1px solid #999999;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>Font Awesome</title>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+</head>
+<body>
+    <div class="wrap">
+        <ul>
+
+                 <li id="first-li"><a href="">
+                     <span class="fa-stack fa-lg">
+                         <i class="fa fa-square-o fa-fw fa-stack-2x"></i>
+                         <i class="fa fa-twitter fa-fw fa-stack-1x"></i>
+                     </span>Twitter</a></li>
+
+            <li><a href="">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-camera fa-fw fa-stack-1x"></i>
+                    <i class="fa fa-ban fa-fw fa-stack-2x" style="color: brown"></i>
+
+                </span>Library</a></li>
+            <li><a href=""><i class="fa fa-pencil fa-fw"></i>Applications</a></li>
+            <li><a href=""><i class="fa fa-cog fa-fw fa-spin"></i>Settings</a></li>
+
+        </ul>
+    </div>
+</body>
+</html>
