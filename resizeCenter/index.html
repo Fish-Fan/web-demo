@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>窗口改变滚动条滚动元素仍然居中</title>
+    <style>
+        body{
+            /*width: 800px;*/
+
+        }
+        .self-container{
+            height: 1300px;
+            background-color: #eee;
+
+
+        }
+        #box{
+            width: 200px;
+            height: 200px;
+            background-color: #003eff;
+            position: relative;
+        }
+    </style>
+    <link rel="stylesheet" href="css/jquery-ui.css">
+
+</head>
+<body>
+<div class="self-container">
+    <button id="one">show dialog</button>
+    <div id="box">
+
+    </div>
+</div>
+<script src="../js/jQuery%201.9.1.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/jquery-ui.js"></script>
+<link href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+
+<script>
+    (function(){
+
+        function center(node){
+            centerFun(node);
+            //浏览器窗口发生变化时仍然居中
+            $(window).resize(function(){
+                centerFun(node);
+            });
+            //滚动条滚动时仍然居中
+            $(window).scroll(function(){
+                centerFun(node);
+            });
+        }
+        function centerFun(node){
+            var windowWidth = $(window).width();
+            var windowHeight = $(window).height();
+            var scrollTop = $(document).scrollTop();
+            var nodeLeft = (windowWidth - node.width())/2;
+            var nodeHeight = (windowHeight - node.height())/2 + scrollTop;
+            node.css({left: nodeLeft + 'px',top: nodeHeight + 'px',display: 'block'});
+        }
+        center($("#box"));
+    })();
+</script>
+</body>
+</html>
