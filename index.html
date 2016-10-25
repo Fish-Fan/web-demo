@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function typeandvalue(x) {
+        if(x == null)
+            return "";
+        switch(x.constructor){
+            case Number :
+                return "Number" + x;
+            case String :
+                return "String" + x;
+            case Array :
+                return "Array" + x;
+            case Date :
+                return "Date" + x;
+            case RegExp :
+                return "RegExp" +x;
+        }
+    }
+    var a = 4;
+    console.log(    typeandvalue(a)
+    );
+</script>
+</html>

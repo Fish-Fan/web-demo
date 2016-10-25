@@ -1,0 +1,55 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.wrapper{
+    position: relative;
+    height: auto;
+    overflow: hidden;
+}
+.wrapper:before{
+    display: block;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.4);
+    z-index: 3;
+}
+.bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-position: center center;
+    background-size: cover;
+}
+.content{
+    position: relative;
+    z-index: 4;
+    color: #fff;
+    text-align: center;
+    height: 70vh;
+    padding-top: 30vh;
+}
+.common-div{
+    height: 70vh;
+    background-color: #ebebeb;
+    text-align: center;
+    padding-top: 30vh;
+}
+
+/*给各个部分定义图片*/
+.bg-1{
+    background-image: url("img/bg.jpeg");
+}
+.bg-2{
+    background-image: url("img/bg_part1.jpeg");
+}
+.bg-3{
+    background-image: url("img/bg-part2.jpeg");
+}
