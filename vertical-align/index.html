@@ -45,6 +45,37 @@
             float: left;
             height: 20px;
         }
+        .ghost-center{
+            height: 200px;
+            position: relative;
+        }
+        .ghost-center::before{
+            content: "";
+            display: inline-block;
+            width: 1%;
+            height: 100%;
+            vertical-align: middle;
+        }
+        .ghost-center p{
+            width: 190px;
+            vertical-align: middle;
+            display: inline-block;
+            margin: 0;
+        }
+        .parent{
+            height: 200px;
+            position: relative;
+            background-color: lightgrey;
+        }
+        .child{
+            width: 100%;
+            /*height: 100px;*/
+            position: absolute;
+            /*margin-top: -50px;*/
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: lightblue;
+        }
     </style>
 </head>
 <body>
@@ -101,6 +132,24 @@
 <div class="container-img">
     <div class="table-container-img">
         <img src="bg.jpg" style="width: 330px;height: 220px">
+    </div>
+</div>
+<!-------------行内元素垂直居中------------------->
+<div class="container ghost-center">
+    <p>I'm vertically centered multiple lines of text in a container. Centered with a ghost pseudo element</p>
+</div>
+
+<!-------------块级元素垂直居中(高度固定)------------------->
+<div class="container parent">
+    <div class="child">
+
+    </div>
+</div>
+
+<!-------------块级元素垂直居中(高度不固定)------------------->
+<div class="container parent">
+    <div class="child">
+        <p>I'm vertically centered multiple lines of text in a container. Centered with a ghost pseudo element</p>
     </div>
 </div>
 </body>
